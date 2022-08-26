@@ -11,11 +11,30 @@
     <div id="app">
         <div class="main__container">
             <div class="user__contacts">
+                <!-- foto + nome user -->
                 <div class="user__contacts__header">
-                    <div>
+                    <div class="user__img">
                         <img class="rounded__img" src="./img/avatar_2.jpg" alt="">
                         <span>Paolo</span>
                     </div>
+                    <div class="user__contacts__header__icon">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <!-- notifiche -->
+                <div class="notification">
+                    <i class=" fa-solid fa-bell-slash notification__icon"></i>
+                    <div class="notification__info">
+                        <span>Ricevi notifiche dei nuovi messaggi</span>
+                        <a href="#">attiva notifiche desktop</a>
+                    </div>
+                </div>
+                <!-- barra di ricerca -->
+                <div class="search__bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Cerca o inizia nuova chat">
                 </div>
             </div>
         </div>
