@@ -15,8 +15,8 @@
                 <!-- foto + nome user -->
                 <div class="user__contacts__header">
                     <div class="user__img">
-                        <img class="rounded__img" src="./img/avatar_2.jpg" alt="">
-                        <span class="contact__name">Paolo</span>
+                        <img class="rounded__img" src="./img/avatar_io.jpg" alt="">
+                        <span class="contact__name">Sofia</span>
                     </div>
                     <div class="user__contacts__header__icon">
                         <i class="fa-solid fa-circle-notch"></i>
@@ -37,12 +37,13 @@
                     <i class="fa-solid fa-magnifying-glass color__gray"></i>
                     <input type="text" placeholder="Cerca o inizia nuova chat">
                 </div>
+
                 <!-- contatti -->
                 <div class="contacts">
-                    <div class="contact">
-                        <img class="rounded__img" src="./img/avatar_1.jpg" alt="">
+                    <div class="contact__info" v-for="contact in contacts">
+                        <img class="rounded__img" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
                         <div>
-                            <span class="contact__name">Michele</span>
+                            <span class="contact__name">{{contact.name}}</span>
                             <p class="last__message color__gray">Ultimo messaggio inviato</p>
                         </div>
                         <p class="last__message__date color__gray">

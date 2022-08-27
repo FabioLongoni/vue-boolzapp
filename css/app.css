@@ -26,6 +26,7 @@
     width: 100%;
     background-color: #eaeaea;
     display: flex;   
+    overflow: hidden;
 }
 
 .contact__name {
@@ -46,7 +47,9 @@
 }
 
 .user__contacts {
-    flex-basis: 500px
+    flex-basis: 500px;
+    background-color: white;
+    overflow: auto;
 }
 
 .user__contacts__header {
@@ -54,6 +57,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    background-color: #eaeaea;
 }
 
 .user__contacts__header__icon {
@@ -105,14 +109,19 @@
     border-radius: 5px;
 }
 
-.contact {
+.contact__info {
     padding: 5px;
     display: flex;
     background-color: white;
     align-items: center;
     gap: 10px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(207, 202, 202);
     position: relative;
+}
+
+.contact__info:hover {
+    background-color: #e9ebeb;
+    cursor: pointer;
 }
 
 .last__message {
@@ -120,7 +129,7 @@
 }
 
 .contacts {
-    overflow: auto;
+    background-color: white;
 }
 
 .last__message__date {
