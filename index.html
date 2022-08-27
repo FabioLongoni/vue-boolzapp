@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
     <title>Boolzapp</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
                 <div class="user__contacts__header">
                     <div class="user__img">
                         <img class="rounded__img" src="./img/avatar_2.jpg" alt="">
-                        <span>Paolo</span>
+                        <span class="contact__name">Paolo</span>
                     </div>
                     <div class="user__contacts__header__icon">
                         <i class="fa-solid fa-circle-notch"></i>
@@ -41,7 +42,7 @@
                     <div class="contact">
                         <img class="rounded__img" src="./img/avatar_1.jpg" alt="">
                         <div>
-                            <span>Michele</span>
+                            <span class="contact__name">Michele</span>
                             <p class="last__message color__gray">Ultimo messaggio inviato</p>
                         </div>
                         <p class="last__message__date color__gray">
@@ -57,7 +58,7 @@
                     <div class="contact__active">
                         <img class="rounded__img" src="./img/avatar_1.jpg" alt="">
                         <div>
-                            <span>Michele</span>
+                            <span class="contact__name">Michele</span>
                             <p class="last__access color__gray">Ultimo accesso oggi alle 12.00</p>
                         </div>
                     </div>

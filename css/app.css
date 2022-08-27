@@ -28,10 +28,14 @@
     display: flex;   
 }
 
+.contact__name {
+    font-size: 14px;
+}
+
 .rounded__img {
     border-radius: 50%;
     aspect-ratio: 1/1;
-    width: 50px;
+    width: 40px;
     filter: drop-shadow(2px 1px 2px rgb(133, 133, 133));
 }
 
