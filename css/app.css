@@ -167,10 +167,6 @@
     display: flex;
 }
 
-.text__area {
-    height: 100%;
-}
-
 .write__space {
     flex-basis: 60px;
     display: flex;
@@ -178,9 +174,14 @@
 }
 
 .text__area {
+    height: 100%;
     background-image: url(../img/mine.jpg);
     overflow: auto;
     box-shadow: inset 0px 0px 15px  rgba(37, 37, 37, 0.23);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .write__space input {
@@ -197,4 +198,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.messages {
+    position: relative;
+    width: 300px;
+    padding: 20px;
+    font-size: 14;
+    border-radius: 5px;
+}
+
+.time {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    font-size: 10px;
+}
+
+.messages__sent {
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+
+.messages__received {
+    background-color: white;
+    align-self: flex-start;
 }
