@@ -73,7 +73,8 @@
                     </div>
                 </div>
                 <div class="text__area">
-                    <div class="messages messages__sent" v-for="(message,i) in contacts[currentIndex].messages">
+                    <div class="messages" v-for="(message,i) in contacts[currentIndex].messages"
+                        v-if="message.status = 'sent' ? 'messages__sent' : 'messages__received'">
                         <p>{{message.message}}</p>
                         <span class="time color__gray">15.55</span>
                     </div>
