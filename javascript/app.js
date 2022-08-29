@@ -166,15 +166,17 @@ const app = new Vue({
         },
         addNewMessage() {
             this.newMessage = this.newMessage.trim();
+            
             if(!this.newMessage) return
-            this.contacts.messages.push({
+            this.contacts[this.currentIndex].messages.push({
                 date: '',
                 message: this.newMessage,
                 status: 'sent',
-            })
-            this.newMessage = ''
-        }
-    }
+            }),
+            this.newMessage = '';
+        },
+        
+    },
 })
 
 console.log(app)
