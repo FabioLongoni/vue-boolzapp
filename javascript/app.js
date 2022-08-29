@@ -156,6 +156,13 @@ const app = new Vue({
                 ],
             }
         ],
+        currentIndex: 0,
+        answer: 'ok',
+    },
+    methods: {
+        currentChat(index) {
+            this.currentIndex = index;
+        },
     }
 })
 
