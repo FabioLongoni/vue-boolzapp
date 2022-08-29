@@ -93,6 +93,7 @@
 .search__bar {
     padding: 5px;
     background-color: white;
+    position: relative;
 }
 
 .search__bar i {

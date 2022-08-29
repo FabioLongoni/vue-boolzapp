@@ -158,11 +158,22 @@ const app = new Vue({
         ],
         currentIndex: 0,
         answer: 'ok',
+        newMessage: '',
     },
     methods: {
         currentChat(index) {
             this.currentIndex = index;
         },
+        addNewMessage() {
+            this.newMessage = this.newMessage.trim();
+            if(!this.newMessage) return
+            this.contacts.messages.push({
+                date: '',
+                message: this.newMessage,
+                status: 'sent',
+            })
+            this.newMessage = ''
+        }
     }
 })
 
