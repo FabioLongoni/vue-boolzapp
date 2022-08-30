@@ -74,9 +74,9 @@
                 </div>
                 <div class="text__area">
                     <div class="messages" v-for="(message,i) in contacts[currentIndex].messages"
-                        :class="message.status == 'sent' ? 'messages__sent' : 'messages__received'">
+                        :class="message.status === 'sent' ? 'messages__sent' : 'messages__received'">
                         <p>{{message.message}}</p>
-                        <span class="time color__gray">15.55</span>
+                        <span class="time color__gray">{{message.date}}</span>
                     </div>
                 </div>
                 <div class="write__area">

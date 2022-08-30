@@ -157,8 +157,7 @@ const app = new Vue({
             }
         ],
         currentIndex: 0,
-        answer: 'ok',
-        newMessage: '',
+        answer: '',
     },
     methods: {
         currentChat(index) {
@@ -168,14 +167,24 @@ const app = new Vue({
             this.newMessage = this.newMessage.trim();
             
             if(!this.newMessage) return
-            this.contacts[this.currentIndex].messages.push({
+
+            const messages = this.contacts[this.currentIndex].messages;
+
+            messages.push({
                 date: '',
                 message: this.newMessage,
                 status: 'sent',
             }),
             this.newMessage = '';
-        },
-        
+            
+            setTimeout(() => {
+                messages.push({
+                    date:'',
+                    message: 'ok',
+                    status:'received',
+                })
+            },2000);
+        },       
     },
 })
 
