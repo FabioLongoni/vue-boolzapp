@@ -172,7 +172,7 @@ const app = new Vue({
             const messages = this.contacts[this.currentIndex].messages;
 
             messages.push({
-                date: '',
+                date: this.getDate(),
                 message: this.newMessage,
                 status: 'sent',
             }),
@@ -180,12 +180,19 @@ const app = new Vue({
             
             setTimeout(() => {
                 messages.push({
-                    date:'',
+                    date: this.getDate(),
                     message: 'ok',
                     status:'received',
                 })
             },2000);
-        },       
+        }, 
+        getDate(){
+            return dayjs().format('DD/MM/YYYY HH:mm:ss')
+        }, 
+        getLastMessage(){
+            let lastMessage = this.contacts[this.currentIndex].messages.length-1;
+            return this.contacts[this.currentIndex].messages[lastMessage].date;
+        },    
     },
 })
 
