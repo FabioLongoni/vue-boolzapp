@@ -191,7 +191,7 @@ const app = new Vue({
         }, 
         getLastMessage(){
             let lastMessage = this.contacts[this.currentIndex].messages.length-1;
-            return this.contacts[this.currentIndex].messages[lastMessage].message;
+            return this.contacts[this.currentIndex].messages[lastMessage].date;
         },    
     },
 })

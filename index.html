@@ -56,7 +56,7 @@
                         <img class="rounded__img" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
                         <div>
                             <span class="contact__name">{{contact.name}}</span>
-                            <p class="last__message color__gray">{{getLastMessage(currentIndex)}}</p>
+                            <p class="last__message color__gray">Ultimo messaggio inviato</p>
                         </div>
                         <p class="last__message__date color__gray">
                             12.00
@@ -72,7 +72,7 @@
                         <img class="rounded__img" :src="'./img/avatar' + contacts[currentIndex].avatar + '.jpg'" alt="">
                         <div>
                             <span class="contact__name">{{contacts[currentIndex].name}}</span>
-                            <p class="last__access color__gray">Ultimo accesso oggi alle 12.00</p>
+                            <p class="last__access color__gray">Ultimo accesso {{getLastMessage(currentIndex)}}</p>
                         </div>
                     </div>
                     <div class="text__area__header__icon color__gray">
