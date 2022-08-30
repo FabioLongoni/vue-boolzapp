@@ -38,12 +38,20 @@
                 <!-- barra di ricerca -->
                 <div class="search__bar">
                     <i class="fa-solid fa-magnifying-glass color__gray"></i>
-                    <input type="text" placeholder="Cerca o inizia nuova chat">
+                    <input
+                        type="text" 
+                        placeholder="Cerca o inizia nuova chat"
+                        v-model="searchContact"
+                    >
                 </div>
 
                 <!-- contatti -->
                 <div class="contacts">
-                    <div class="contact__info" v-for="(contact,i) in contacts" @click="currentChat(i)" :class="{'current__chat' : currentIndex === i}">
+                    <div class="contact__info"
+                         v-for="(contact,i) in contacts" 
+                         @click="currentChat(i)" 
+                         :class="{'current__chat' : currentIndex === i}"
+                         v-if="contact.name.toLowerCase().includes(searchContact)">
                         <img class="rounded__img" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
                         <div>
                             <span class="contact__name">{{contact.name}}</span>
