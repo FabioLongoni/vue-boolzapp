@@ -56,7 +56,7 @@
                         <img class="rounded__img" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
                         <div>
                             <span class="contact__name">{{contact.name}}</span>
-                            <p class="last__message color__gray">Ultimo messaggio inviato</p>
+                            <p class="last__message color__gray">{{getLastMessage(currentIndex)}}</p>
                         </div>
                         <p class="last__message__date color__gray">
                             12.00
