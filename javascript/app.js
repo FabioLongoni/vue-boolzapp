@@ -189,10 +189,11 @@ const app = new Vue({
         getDate(){
             return dayjs().format('DD/MM/YYYY HH:mm:ss')
         }, 
-        getLastMessage(){
-            let lastMessage = this.contacts[this.currentIndex].messages.length-1;
-            return this.contacts[this.currentIndex].messages[lastMessage].date;
-        },    
+        getLastAccess(){
+            let lastAccess = this.contacts[this.currentIndex].messages.length-1;
+            return this.contacts[this.currentIndex].messages[lastAccess].date;
+        },
+        
     },
 })
 
